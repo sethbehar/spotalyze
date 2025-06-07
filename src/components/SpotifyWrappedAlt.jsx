@@ -4,12 +4,12 @@ export default function SpotifyWrappedAlt() {
   return (
     <section className="grid grid-cols-12 gap-8 mb-20">
       <div className="col-span-12 md:col-span-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
           You don't need to wait for
           <br />
-          Spotify wrapped
+          Spotify <span className='text-green-900'>wrapped</span>
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-900 mb-6">
           Upload the data you requested from Spotify and explore the most important parts of your
           music listening habits. There's no need to wait. You can get this:
         </p>

@@ -15,14 +15,14 @@ const features = [
 export default function Features() {
   return (
     <section className="mb-20">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">What You Will Get</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-black mb-8">What You Will Get</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((f, i) => (
           <div key={i} className="flex items-start">
             <div className="w-8 h-8 rounded-fullflex items-center justify-center mr-3 mt-1">
               <img src={f.icon} width={25} height={25}/>
             </div>
-            <p className="text-gray-700">{f.text}</p>
+            <p className="text-black">{f.text}</p>
           </div>
         ))}
       </div>
