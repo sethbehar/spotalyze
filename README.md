@@ -1,12 +1,29 @@
-# React + Vite
+TO DO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AUTH
+[*] - Set up Clerk
+[*] - Set up env with clerk keys
+[*] - Complete sign up page
+[*] - Complete log in page
 
-Currently, two official plugins are available:
+LANDING PAGE
+[*] - Add links for login/signup buttons
+[ ] - Fix cards for spotfy wrapped section
+[*] - Add routes for pricing cards
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DB
+[*] - Set up user table for tracking credits associated with users
+[ ] - Connect to db with backend
+[ ] - Save user data on sign in 
+[ ] - Create user flow - Login, purchase credits, view total credits in profile
 
-## Expanding the ESLint configuration
+DASHBOARD
+[ ] - Lock certain stats if user has no credits
+[ ] - Unlock all stats if user used a credit with upload
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+PAYMENTS
+[*] - Set up stripe business
+[*] - Set up checkout session
+[ ] - Connect product to test session
+[ ] - Create webhook and test connection
+[ ] 
