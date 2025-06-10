@@ -12,7 +12,7 @@ export default function Pricing() {
       <p className="text-gray-600 text-center mb-20">Buy credits to continue uploading as you need.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto items-center">
         {/* Free Plan */}
-        <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 transform scale-105">
+        <div className="bg-white rounded-xl shadow-xl shadow-green-800 hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 transform scale-105">
           <div className="p-8 text-center">
             <h3 className="text-xl font-bold text-gray-800 mb-2">Free</h3>
             <p className="text-sm text-gray-500 mb-4">1 free file <span className="text-green-700 font-bold">limited</span> upload</p>
@@ -47,7 +47,7 @@ export default function Pricing() {
           </div>
         </div>
         {/* Paid Plan */}
-        <div className="bg-white rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden text-black transform scale-110 relative">
+        <div className="bg-white rounded-xl shadow-xl shadow-green-800 hover:shadow-3xl transition-all duration-300 overflow-hidden text-black transform scale-110 relative">
           <div className="absolute top-0 right-0 bg-green-900 text-white px-3 py-1 text-xs font-semibold rounded-bl-lg">
             POPULAR
           </div>
