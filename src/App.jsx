@@ -22,11 +22,9 @@ export default function App() {
 
     (async () => {
       try {
-        // getToken (no template for now, to simplify)
         const token = await getToken();
 
-        // fire the upsert
-        const res = await fetch('http://localhost:8000/users', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/users`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -52,15 +50,6 @@ export default function App() {
               <Features />
               <Pricing />
               <Footer />
-              {/* <div>
-                <input
-                  type="file"
-                  accept=".zip"
-                  onChange={e => setZipFile(e.target.files[0] || null)}
-                />
-                {loading && <p>Loading…</p>}
-                {!loading && entries.length > 0 && <DashboardLayout/>}
-              </div> */}
             </div>
           </div>
         </div>

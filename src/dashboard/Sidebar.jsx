@@ -13,7 +13,7 @@ export default function Sidebar() {
         <div className="space-y-4">
           <NavItem className='bg-green-800' icon="dashboard"  label="Dashboard" active />
           <NavItem className='bg-green-800' icon="equalizer"  label="Songs"     />
-          <NavItem className='bg-green-800' icon="person"     label="Artist"    />
+          <NavItem className='bg-green-800' icon="person"     label="Artists"    />
           <NavItem className='bg-green-800' icon="add"        label="Extra"     />
         </div>
       </div>

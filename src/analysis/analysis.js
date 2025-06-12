@@ -32,3 +32,45 @@ export function dailyTotals(entries) {
     .map(([day, ms]) => ({ day, hours: ms / 1000 / 60 / 60 }))
     .sort((a, b) => a.day.localeCompare(b.day))
 }
+
+// 3d) Top N artists by total time
+export function topArtists(entries, topN = 10) {
+  const byArtist = entries.reduce((acc, e) => {
+    const artist = e.master_metadata_album_artist_name 
+                 || e.master_metadata_artist_name 
+                 || '<unknown>';
+    acc[artist] = (acc[artist] || 0) + (e.ms_played || 0);
+    return acc;
+  }, {});
+
+  return Object.entries(byArtist)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, topN)
+    .map(([artist, ms]) => ({
+      artist,
+      hours: ms / 1000 / 60 / 60
+    }));
+}
+
+// 3e) Most-listened calendar year
+export function mostListenedYear(entries) {
+  const byYear = entries.reduce((acc, e) => {
+    if (!e.ts) return acc;
+    const year = new Date(e.ts).getFullYear();
+    acc[year] = (acc[year] || 0) + (e.ms_played || 0);
+    return acc;
+  }, {});
+
+  let maxYear = null, maxMs = 0;
+  Object.entries(byYear).forEach(([year, ms]) => {
+    if (ms > maxMs) {
+      maxMs  = ms;
+      maxYear = year;
+    }
+  });
+
+  return {
+    year: maxYear,
+    hours: maxMs / 1000 / 60 / 60
+  };
+}
