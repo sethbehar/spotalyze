@@ -3,7 +3,7 @@
 import { FileUp, Loader2, AlertCircle, CheckCircle2, FileArchive } from "lucide-react"
 import { useState, useRef } from "react"
 
-export default function UploadArea({ selectedFile, onFileSelect, processing, error }) {
+export default function UploadArea({ selectedFile, onFileSelect, processing, error, isPaid, credits }) {
   const [isDragging, setIsDragging] = useState(false)
   const fileInputRef = useRef(null)
 
